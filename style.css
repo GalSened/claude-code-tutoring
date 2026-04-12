@@ -255,3 +255,99 @@ img, video { display: block; max-width: 100%; }
   color: var(--color-text-secondary);
   margin-top: 0.5rem;
 }
+
+/* ========================================
+   PHILOSOPHY
+   ======================================== */
+
+.philosophy {
+  text-align: center;
+}
+
+.philosophy__equation {
+  margin-bottom: 3rem;
+}
+
+.philosophy__terms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.philosophy__term {
+  text-align: center;
+}
+
+.philosophy__term strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  margin-top: 0.5rem;
+}
+
+.philosophy__term span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.2rem;
+}
+
+.philosophy__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.philosophy__icon--code {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-indigo);
+}
+
+.philosophy__icon--result {
+  background: linear-gradient(135deg, rgba(100, 108, 255, 0.2), rgba(245, 158, 11, 0.2));
+  border-color: rgba(245, 158, 11, 0.4);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-gold);
+}
+
+.philosophy__op {
+  font-size: 2rem;
+  color: var(--color-gold);
+  font-weight: 300;
+}
+
+.philosophy__text {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.philosophy__text p {
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.philosophy__punchline {
+  font-style: italic;
+  color: var(--color-text-secondary) !important;
+  font-size: 1.15rem !important;
+  margin-top: 0.5rem;
+}
+
+.text-gold { color: var(--color-gold); }
+.text-indigo { color: var(--color-indigo); }
