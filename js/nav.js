@@ -17,4 +17,18 @@ export function initNav() {
       if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
   });
+
+  // Mobile menu toggle
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.querySelector('.nav__links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+    });
+    links.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+      });
+    });
+  }
 }
