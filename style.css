@@ -814,3 +814,158 @@ img, video { display: block; max-width: 100%; }
   color: var(--color-text-dim);
   font-style: italic;
 }
+
+/* ========================================
+   FAQ
+   ======================================== */
+
+.faq__content {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.faq__list {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.faq__item {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.faq__question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.25rem;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq__question::after {
+  content: '+';
+  color: var(--color-indigo);
+  font-size: 1.2rem;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.faq__item--open .faq__question::after {
+  content: '−';
+}
+
+.faq__item--open {
+  border-color: rgba(100, 108, 255, 0.2);
+  background: rgba(100, 108, 255, 0.03);
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-out), padding 0.4s var(--ease-out);
+}
+
+.faq__item--open .faq__answer {
+  max-height: 300px;
+  padding: 0 1.25rem 1rem;
+}
+
+.faq__answer p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.faq__testimonials {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border: 1px dashed var(--color-border);
+  border-radius: 8px;
+}
+
+.faq__testimonials p {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+  padding: 3rem 2.5rem 1.5rem;
+  background: var(--color-bg);
+  text-align: center;
+}
+
+.footer__brand {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 2rem;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer__logo span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.footer__brand p {
+  font-size: 0.8rem;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.footer__links div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer__heading {
+  font-size: 0.65rem;
+  color: var(--color-text-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.footer__links a {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  transition: color 0.2s;
+}
+
+.footer__links a:hover { color: var(--color-text-primary); }
+
+.footer__bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__bottom span {
+  font-size: 0.7rem;
+  color: var(--color-text-dim);
+}
