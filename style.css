@@ -463,3 +463,95 @@ img, video { display: block; max-width: 100%; }
 .track__outcome--indigo { border: 1px solid rgba(100, 108, 255, 0.2); color: var(--color-indigo); }
 .track__outcome--gold { background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05)); border: 1px solid rgba(245, 158, 11, 0.3); color: var(--color-gold); }
 .track__outcome--emerald { border: 1px solid rgba(16, 185, 129, 0.2); color: var(--color-emerald); }
+
+/* ========================================
+   PROOF
+   ======================================== */
+
+.proof__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.proof__scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.proof__scroll::-webkit-scrollbar { height: 4px; }
+.proof__scroll::-webkit-scrollbar-track { background: var(--color-border); border-radius: 2px; }
+.proof__scroll::-webkit-scrollbar-thumb { background: var(--color-indigo); border-radius: 2px; }
+
+.proof__card {
+  min-width: 320px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.proof__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.proof__before {
+  padding: 1.25rem;
+  background: rgba(239, 68, 68, 0.04);
+  border-right: 1px solid var(--color-border);
+}
+
+.proof__after {
+  padding: 1.25rem;
+  background: rgba(16, 185, 129, 0.04);
+}
+
+.proof__label {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.proof__label--before { color: var(--color-red); }
+.proof__label--after { color: var(--color-emerald); }
+
+.proof__metric {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.3rem 0;
+}
+
+.proof__metric--before { color: var(--color-red); }
+.proof__metric--after { color: var(--color-emerald); }
+
+.proof__before p,
+.proof__after p {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.25rem;
+  line-height: 1.5;
+}
+
+.proof__footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.proof__footer strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+}
+
+.proof__footer span {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
