@@ -1,4 +1,7 @@
-// As Strong As You Think — Main Entry
-// Modules imported as they are built in subsequent tasks
+import { initNav } from './nav.js';
+import { initVideoSync } from './video-sync.js';
 
-console.log('🚀 As Strong As You Think — loaded');
+document.addEventListener('DOMContentLoaded', () => {
+  initNav();
+  initVideoSync();
+});

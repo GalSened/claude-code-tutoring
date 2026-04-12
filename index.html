@@ -10,7 +10,53 @@
   <link rel="preload" href="/assets/fonts/JetBrainsMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
-  <!-- Sections will be added in subsequent tasks -->
+  <!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <div class="nav__logo">
+    <svg class="nav__logo-svg" viewBox="0 0 40 40" width="32" height="32">
+      <defs>
+        <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#646cff"/>
+          <stop offset="100%" stop-color="#f59e0b"/>
+        </linearGradient>
+      </defs>
+      <circle cx="20" cy="20" r="19" fill="url(#logo-gradient)"/>
+      <circle cx="20" cy="20" r="15" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
+      <circle cx="20" cy="20" r="11" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+      <text x="20" y="26" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="16" font-weight="800">G</text>
+    </svg>
+    <span class="nav__name">GAL SEGAL</span>
+  </div>
+  <div class="nav__links">
+    <a href="#philosophy">Philosophy</a>
+    <a href="#tracks">Tracks</a>
+    <a href="#proof">Results</a>
+    <a href="#about">About</a>
+    <a href="#cta" class="nav__cta">Book Free Session</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero__video-wrap">
+    <video class="hero__video" autoplay muted loop playsinline
+           poster="/assets/video/hero-poster.webp"
+           id="hero-video">
+      <source src="/assets/video/hero-loop.mp4" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+  </div>
+  <div class="hero__content">
+    <span class="hero__label">CLAUDE CODE MASTERY</span>
+    <h1 class="hero__title">As Strong As<br>You Think</h1>
+    <p class="hero__subtitle">Private 1-on-1 training that transforms how you work with AI. The stronger your thinking, the more powerful you become.</p>
+    <div class="hero__actions">
+      <a href="#cta" class="btn btn--primary">Book Your Free Session</a>
+      <a href="#philosophy" class="btn btn--ghost">See What's Possible ↓</a>
+    </div>
+  </div>
+</section>
+
   <script type="module" src="/js/main.js"></script>
 </body>
 </html>
