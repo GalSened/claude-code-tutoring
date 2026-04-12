@@ -273,6 +273,55 @@
   </div>
 </section>
 
+  <!-- ===== CTA ===== -->
+<section class="section cta" id="cta">
+  <div class="cta__glow"></div>
+  <div class="cta__content">
+    <span class="section__label" style="color: var(--color-gold);">YOUR FIRST STEP</span>
+    <h2 class="cta__title">See the Power for Yourself.<br><span class="cta__free">For Free.</span></h2>
+    <p class="cta__desc">Your first session is a real working session — not a pitch. We'll work on YOUR project, solve YOUR problem. If you're not blown away, we shake hands and part ways.</p>
+
+    <div class="cta__cards">
+      <a href="#" class="cta__card cta__card--calendly" id="cta-calendly">
+        <span class="cta__card-icon">📅</span>
+        <strong>Book a Slot</strong>
+        <span>Pick a time that works for you</span>
+        <div class="cta__card-btn cta__card-btn--indigo">Open Calendar</div>
+      </a>
+      <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Gal%2C%20I%27m%20interested%20in%20Claude%20Code%20training" target="_blank" rel="noopener" class="cta__card">
+        <span class="cta__card-icon">💬</span>
+        <strong>WhatsApp</strong>
+        <span>Quick chat, fast response</span>
+        <div class="cta__card-btn cta__card-btn--emerald">Message Me</div>
+      </a>
+      <button class="cta__card" id="cta-form-toggle">
+        <span class="cta__card-icon">✉️</span>
+        <strong>Send a Message</strong>
+        <span>Tell me about your project</span>
+        <div class="cta__card-btn cta__card-btn--gold">Contact Form</div>
+      </button>
+    </div>
+
+    <!-- Inline contact form (hidden by default) -->
+    <form class="cta__form" id="contact-form" style="display: none;" action="/api/contact" method="POST">
+      <input type="text" name="name" placeholder="Your name" required class="cta__input">
+      <input type="email" name="email" placeholder="Your email" required class="cta__input">
+      <select name="track" class="cta__input">
+        <option value="">Which track interests you?</option>
+        <option value="zero-to-builder">Zero to Builder (Beginner)</option>
+        <option value="10x-developer">10x Developer</option>
+        <option value="challenge">Bring Your Challenge</option>
+        <option value="not-sure">Not sure yet</option>
+      </select>
+      <textarea name="message" placeholder="Tell me about your project or what you'd like to learn..." rows="4" class="cta__input cta__textarea"></textarea>
+      <button type="submit" class="btn btn--primary cta__submit">Send Message</button>
+      <div class="cta__form-status" id="form-status"></div>
+    </form>
+
+    <p class="cta__trust">No commitment. No credit card. Just a real session to prove it works.</p>
+  </div>
+</section>
+
   <script type="module" src="/js/main.js"></script>
 </body>
 </html>
