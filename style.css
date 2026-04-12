@@ -1,0 +1,61 @@
+/* ========================================
+   AS STRONG AS YOU THINK — Design Tokens
+   ======================================== */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/assets/fonts/JetBrainsMono-Variable.woff2') format('woff2');
+  font-weight: 100 800;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --color-bg: #050505;
+  --color-surface: #0d1117;
+  --color-indigo: #646cff;
+  --color-gold: #f59e0b;
+  --color-emerald: #10b981;
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #8b949e;
+  --color-text-dim: #4b5563;
+  --color-border: #1a1a2e;
+  --color-red: #ef4444;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --section-padding: clamp(4rem, 10vh, 8rem) clamp(1.5rem, 5vw, 4rem);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { color: var(--color-indigo); text-decoration: none; }
+
+img, video { display: block; max-width: 100%; }
