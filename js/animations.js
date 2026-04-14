@@ -8,6 +8,32 @@ export function initAnimations() {
   // GSAP must NOT touch .hero__content — inline styles from gsap.from beat the
   // CSS class-reveal and pin the element invisible.
 
+  // Chasm — pain slides from left, win slides from right (mirrors the argument)
+  gsap.from('.chasm__col--pain .chasm__list li', {
+    scrollTrigger: { trigger: '.chasm__columns', start: 'top 75%' },
+    opacity: 0,
+    x: -30,
+    stagger: 0.08,
+    duration: 0.7,
+    ease: 'power3.out',
+  });
+  gsap.from('.chasm__col--win .chasm__list li', {
+    scrollTrigger: { trigger: '.chasm__columns', start: 'top 75%' },
+    opacity: 0,
+    x: 30,
+    stagger: 0.08,
+    duration: 0.7,
+    ease: 'power3.out',
+  });
+  gsap.from('.chasm__bridge-line, .chasm__close', {
+    scrollTrigger: { trigger: '.chasm__bridge', start: 'top 85%' },
+    opacity: 0,
+    y: 20,
+    stagger: 0.18,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+
   // Philosophy equation — staggered reveal
   gsap.from('.philosophy__term, .philosophy__op', {
     scrollTrigger: {

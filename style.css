@@ -647,6 +647,130 @@ img, video { display: block; max-width: 100%; }
 }
 
 /* ========================================
+   THE CHASM (bridge-the-gap thesis)
+   ======================================== */
+
+.chasm {
+  text-align: center;
+}
+
+.chasm__header {
+  margin-bottom: 3rem;
+}
+
+.chasm__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.chasm__col {
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 2rem 1.75rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent);
+  transition: border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+
+.chasm__col--win {
+  border-color: rgba(245, 158, 11, 0.22);
+  background:
+    linear-gradient(180deg, rgba(245, 158, 11, 0.035), transparent),
+    linear-gradient(180deg, rgba(100, 108, 255, 0.04), transparent);
+  box-shadow: 0 0 40px rgba(100, 108, 255, 0.06);
+}
+
+.chasm__col--win:hover {
+  transform: translateY(-3px);
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+.chasm__col-heading {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.chasm__col--pain .chasm__col-heading {
+  color: var(--color-text-secondary);
+}
+
+.chasm__col--win .chasm__col-heading {
+  background: linear-gradient(135deg, var(--color-indigo), var(--color-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.chasm__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chasm__list li {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.chasm__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.chasm__col--pain .chasm__list li { color: var(--color-text-secondary); }
+.chasm__col--pain .chasm__list li::before { background: var(--color-text-dim); }
+
+.chasm__col--win .chasm__list li { color: var(--color-text-primary); }
+.chasm__col--win .chasm__list li::before {
+  background: linear-gradient(135deg, var(--color-indigo), var(--color-gold));
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.35);
+}
+
+.chasm__list em {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.chasm__bridge {
+  margin: 3rem auto 0.75rem;
+  max-width: 760px;
+}
+
+.chasm__bridge-line {
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  background: linear-gradient(135deg, var(--color-indigo), var(--color-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.3;
+}
+
+.chasm__close {
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  margin-top: 0.5rem;
+  letter-spacing: 0.2px;
+}
+
+/* ========================================
    ABOUT
    ======================================== */
 
@@ -1188,6 +1312,13 @@ img, video { display: block; max-width: 100%; }
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* ── Chasm: stack the two-tribes columns vertically ── */
+  .chasm__columns {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+  .chasm__col { padding: 1.75rem 1.5rem; }
 
   /* ── Proof: stack before/after vertically, arrow points down ── */
   .proof__scroll { grid-template-columns: 1fr; max-width: 420px; }
