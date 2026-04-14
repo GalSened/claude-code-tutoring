@@ -30,22 +30,21 @@ export function initContactForm() {
     submitBtn.disabled = true;
 
     try {
-      const data = Object.fromEntries(new FormData(form));
-      const res = await fetch('/api/contact', {
+      // Web3Forms expects multipart FormData posted to its action URL.
+      const res = await fetch(form.action, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: new FormData(form),
       });
-
-      if (res.ok) {
-        status.textContent = '✓ Message sent! I\'ll get back to you within 24 hours.';
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.success) {
+        status.textContent = '✓ Message sent. I\'ll reply within 24 hours.';
         status.style.color = 'var(--color-emerald)';
         form.reset();
       } else {
-        throw new Error('Send failed');
+        throw new Error(json.message || 'Send failed');
       }
-    } catch {
-      status.textContent = 'Something went wrong. Try WhatsApp instead?';
+    } catch (err) {
+      status.textContent = 'Couldn\'t send right now. Please email gal directly.';
       status.style.color = 'var(--color-red)';
     } finally {
       submitBtn.textContent = 'Send Message';

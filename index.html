@@ -380,8 +380,14 @@
     <a href="https://wa.me/REAL_NUMBER?text=..." target="_blank" rel="noopener" class="cta__card"> ... </a>
     -->
 
-    <!-- Inline contact form (hidden by default) -->
-    <form class="cta__form" id="contact-form" style="display: none;" action="/api/contact" method="POST">
+    <!-- Inline contact form (hidden by default).
+         Submits via Web3Forms (free, no signup beyond email-for-access-key).
+         TODO: replace WEB3FORMS_ACCESS_KEY below with the real key from https://web3forms.com -->
+    <form class="cta__form" id="contact-form" style="display: none;" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY">
+      <input type="hidden" name="subject" value="New Claude Code training inquiry">
+      <input type="hidden" name="from_name" value="As Strong As You Think">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
       <input type="text" name="name" placeholder="Your name" required class="cta__input">
       <input type="email" name="email" placeholder="Your email" required class="cta__input">
       <select name="track" class="cta__input">
