@@ -4,14 +4,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export function initAnimations() {
-  // Hero content fade-in on load
-  gsap.from('.hero__content', {
-    opacity: 0,
-    y: 30,
-    duration: 1.2,
-    ease: 'power3.out',
-    delay: 0.3,
-  });
+  // Hero reveal is owned by js/video-sync.js (fires after video freeze at t=7s).
+  // GSAP must NOT touch .hero__content — inline styles from gsap.from beat the
+  // CSS class-reveal and pin the element invisible.
 
   // Philosophy equation — staggered reveal
   gsap.from('.philosophy__term, .philosophy__op', {
@@ -115,23 +110,28 @@ export function initAnimations() {
     ease: 'power2.out',
   });
 
-  // Stat counters (about section)
+  // Stat counters (about section) — preserves K/M suffixes and trailing "+"
   document.querySelectorAll('.about__stat strong').forEach(el => {
-    const target = parseInt(el.textContent);
-    if (isNaN(target)) return;
-
+    const match = el.textContent.trim().match(/^(\d+(?:\.\d+)?)([KM]?)(\+?)$/);
+    if (!match) return;
+    const [, numStr, unit, plus] = match;
+    const target = parseFloat(numStr);
+    const format = (n) => {
+      const rounded = unit ? Math.round(n * 10) / 10 : Math.round(n);
+      return rounded + unit + plus;
+    };
+    el.textContent = format(0);
     ScrollTrigger.create({
       trigger: el,
       start: 'top 85%',
       onEnter: () => {
-        gsap.from(el, {
-          textContent: 0,
+        const counter = { value: 0 };
+        gsap.to(counter, {
+          value: target,
           duration: 1.5,
           ease: 'power2.out',
-          snap: { textContent: 1 },
-          onUpdate: function() {
-            el.textContent = Math.round(parseFloat(el.textContent)) + '+';
-          },
+          onUpdate: () => { el.textContent = format(counter.value); },
+          onComplete: () => { el.textContent = format(target); },
         });
       },
       once: true,

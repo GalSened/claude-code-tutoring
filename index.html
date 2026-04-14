@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>As Strong As You Think — Claude Code Mastery by Gal Segal</title>
+  <title>As Strong As You Think — Claude Code Mastery by Gal Sened</title>
   <meta name="description" content="Private 1-on-1 Claude Code training. The stronger your thinking, the more powerful you become. Book your free session.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="As Strong As You Think — Claude Code Mastery">
-  <meta property="og:description" content="Private 1-on-1 Claude Code training by Gal Segal. Book your free session.">
+  <meta property="og:description" content="Private 1-on-1 Claude Code training by Gal Sened. Book your free session.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/assets/og-image.jpg">
 
@@ -28,6 +28,18 @@
   <link rel="preload" href="/assets/fonts/JetBrainsMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
+  <!-- ===== SHARED SVG DEFS =====
+       Used by every SVG icon on the page via `stroke="url(#icon-grad)"`.
+       Must load before any icon — do not move below other SVG tags. -->
+  <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="icon-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#646cff"/>
+        <stop offset="100%" stop-color="#f59e0b"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
   <!-- ===== NAV ===== -->
 <nav class="nav" id="nav">
   <div class="nav__logo">
@@ -43,7 +55,7 @@
       <circle cx="20" cy="20" r="11" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
       <text x="20" y="26" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="16" font-weight="800">G</text>
     </svg>
-    <span class="nav__name">GAL SEGAL</span>
+    <span class="nav__name">GAL SENED</span>
   </div>
   <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
     <span></span><span></span><span></span>
@@ -60,7 +72,7 @@
 <!-- ===== HERO ===== -->
 <section class="hero" id="hero">
   <div class="hero__video-wrap">
-    <video class="hero__video" autoplay muted loop playsinline
+    <video class="hero__video" autoplay muted playsinline
            poster="/assets/video/hero-poster.webp"
            id="hero-video">
       <source src="/assets/video/hero-loop.mp4" type="video/mp4">
@@ -70,7 +82,7 @@
   <div class="hero__content">
     <span class="hero__label">CLAUDE CODE MASTERY</span>
     <h1 class="hero__title">As Strong As<br>You Think</h1>
-    <p class="hero__subtitle">Private 1-on-1 training that transforms how you work with AI. The stronger your thinking, the more powerful you become.</p>
+    <p class="hero__subtitle">I'll teach you to build worlds of your own.</p>
     <div class="hero__actions">
       <a href="#cta" class="btn btn--primary">Book Your Free Session</a>
       <a href="#philosophy" class="btn btn--ghost">See What's Possible ↓</a>
@@ -84,19 +96,34 @@
     <span class="section__label" style="color: var(--color-indigo);">THE CENTAUR EFFECT</span>
     <div class="philosophy__terms">
       <div class="philosophy__term" data-anim="fade-up">
-        <div class="philosophy__icon">🧠</div>
+        <div class="philosophy__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="url(#icon-grad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M24 10c-4 0-7 3-7 7 0 1-1 2-2 2-3 0-5 3-5 6s2 5 4 6c0 3 3 5 5 5 1 0 2 1 2 2 0 2 1 4 3 4s3-2 3-4c0-1 1-2 2-2 2 0 5-2 5-5 2-1 4-3 4-6s-2-6-5-6c-1 0-2-1-2-2 0-4-3-7-7-7z"/>
+            <path d="M24 18v18M19 24h10M19 30h10"/>
+          </svg>
+        </div>
         <strong>Your Thinking</strong>
         <span>Strategy, creativity, judgment</span>
       </div>
       <div class="philosophy__op" data-anim="fade-up">+</div>
       <div class="philosophy__term" data-anim="fade-up">
-        <div class="philosophy__icon philosophy__icon--code">&gt;_</div>
+        <div class="philosophy__icon philosophy__icon--code">
+          <svg viewBox="0 0 48 48" fill="none" stroke="url(#icon-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="6" y="10" width="36" height="28" rx="4"/>
+            <path d="M14 22l5 4-5 4M24 30h10"/>
+          </svg>
+        </div>
         <strong>Claude Code</strong>
         <span>Speed, scale, precision</span>
       </div>
       <div class="philosophy__op" data-anim="fade-up">=</div>
       <div class="philosophy__term philosophy__term--result" data-anim="fade-up">
-        <div class="philosophy__icon philosophy__icon--result">3</div>
+        <div class="philosophy__icon philosophy__icon--result">
+          <svg viewBox="0 0 48 48" fill="none" stroke="url(#icon-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 24c0-5 4-9 9-9s9 4 9 9-4 9-9 9-9-4-9-9z"/>
+            <path d="M20 24c0-5 4-9 9-9s9 4 9 9-4 9-9 9-9-4-9-9z"/>
+          </svg>
+        </div>
         <strong>The Centaur</strong>
         <span>Greater than either alone</span>
       </div>
@@ -119,6 +146,13 @@
 
     <div class="track track--indigo" data-anim="fade-up">
       <div class="track__bar"></div>
+      <div class="track__icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="url(#icon-grad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M24 8L6 16l18 8 18-8-18-8z"/>
+          <path d="M12 20v8c0 2.5 5 4 12 4s12-1.5 12-4v-8"/>
+          <path d="M42 16v10"/>
+        </svg>
+      </div>
       <span class="track__audience">FOR BEGINNERS</span>
       <h3 class="track__name">Zero to Builder</h3>
       <p class="track__desc">You've never touched Claude Code. In 6 sessions, you'll be building real tools, automating work, and shipping projects.</p>
@@ -138,6 +172,11 @@
 
     <div class="track track--gold" data-anim="fade-up">
       <div class="track__bar"></div>
+      <div class="track__icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="url(#icon-grad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M26 6 14 26h10l-2 16 12-20H24z"/>
+        </svg>
+      </div>
       <span class="track__audience">FOR DEVELOPERS</span>
       <h3 class="track__name">10x Developer</h3>
       <p class="track__desc">You code daily. Claude Code is good but you know it could be <em>insane</em>. In 4 sessions, you'll unlock the full power.</p>
@@ -157,6 +196,13 @@
 
     <div class="track track--emerald" data-anim="fade-up">
       <div class="track__bar"></div>
+      <div class="track__icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="url(#icon-grad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="24" cy="24" r="16"/>
+          <circle cx="24" cy="24" r="10"/>
+          <circle cx="24" cy="24" r="4" fill="url(#icon-grad)" stroke="none"/>
+        </svg>
+      </div>
       <span class="track__audience">FOR ANYONE</span>
       <h3 class="track__name">Bring Your Challenge</h3>
       <p class="track__desc">Got a project? A problem? An idea you can't crack? Bring it. We'll build it together in a single session. Real work, real results.</p>
@@ -193,6 +239,7 @@
           <div class="proof__metric proof__metric--before">3 hrs</div>
           <p>Setting up a new project with CI/CD, tests, and deployment</p>
         </div>
+        <span class="proof__arrow" aria-hidden="true"></span>
         <div class="proof__after">
           <span class="proof__label proof__label--after">AFTER</span>
           <div class="proof__metric proof__metric--after">8 min</div>
@@ -212,6 +259,7 @@
           <div class="proof__metric proof__metric--before">Manual</div>
           <p>Copy-pasting prompts, no memory, starting over every session</p>
         </div>
+        <span class="proof__arrow" aria-hidden="true"></span>
         <div class="proof__after">
           <span class="proof__label proof__label--after">AFTER</span>
           <div class="proof__metric proof__metric--after">Auto</div>
@@ -231,6 +279,7 @@
           <div class="proof__metric proof__metric--before">Idea</div>
           <p>"I have this concept but I don't know where to start"</p>
         </div>
+        <span class="proof__arrow" aria-hidden="true"></span>
         <div class="proof__after">
           <span class="proof__label proof__label--after">AFTER</span>
           <div class="proof__metric proof__metric--after">Live</div>
@@ -253,7 +302,7 @@
       <div class="about__avatar">
         <div class="about__avatar-inner">G</div>
       </div>
-      <h3 class="about__name">Gal Segal</h3>
+      <h3 class="about__name">Gal Sened</h3>
       <span class="about__role">Claude Code Centaur</span>
       <div class="about__stats">
         <div class="about__stat about__stat--indigo">
@@ -299,29 +348,37 @@
   <div class="cta__glow"></div>
   <div class="cta__content">
     <span class="section__label" style="color: var(--color-gold);">YOUR FIRST STEP</span>
-    <h2 class="cta__title">See the Power for Yourself.<br><span class="cta__free">For Free.</span></h2>
+    <h2 class="cta__title">See Your Own Power.<br><span class="cta__free">For Free.</span></h2>
     <p class="cta__desc">Your first session is a real working session — not a pitch. We'll work on YOUR project, solve YOUR problem. If you're not blown away, we shake hands and part ways.</p>
 
-    <div class="cta__cards">
-      <a href="#" class="cta__card cta__card--calendly" id="cta-calendly">
-        <span class="cta__card-icon">📅</span>
-        <strong>Book a Slot</strong>
-        <span>Pick a time that works for you</span>
-        <div class="cta__card-btn cta__card-btn--indigo">Open Calendar</div>
-      </a>
-      <a href="https://wa.me/YOUR_NUMBER?text=Hi%20Gal%2C%20I%27m%20interested%20in%20Claude%20Code%20training" target="_blank" rel="noopener" class="cta__card">
-        <span class="cta__card-icon">💬</span>
-        <strong>WhatsApp</strong>
-        <span>Quick chat, fast response</span>
-        <div class="cta__card-btn cta__card-btn--emerald">Message Me</div>
-      </a>
-      <button class="cta__card" id="cta-form-toggle">
-        <span class="cta__card-icon">✉️</span>
+    <div class="cta__cards cta__cards--two">
+      <button type="button" class="cta__card" id="cta-form-toggle">
+        <span class="cta__card-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="url(#icon-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="8" width="24" height="18" rx="2"/>
+            <path d="M4 11l12 8 12-8"/>
+          </svg>
+        </span>
         <strong>Send a Message</strong>
         <span>Tell me about your project</span>
-        <div class="cta__card-btn cta__card-btn--gold">Contact Form</div>
+        <div class="cta__card-btn cta__card-btn--gold">Open Contact Form</div>
       </button>
+      <a href="#cta-form-toggle" class="cta__card" id="cta-scroll-to-form">
+        <span class="cta__card-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="url(#icon-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="7" width="24" height="22" rx="3"/>
+            <path d="M4 13h24M11 3v6M21 3v6"/>
+            <circle cx="16" cy="20" r="1.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <strong>Book a Slot</strong>
+        <span>Pick a time that works for you</span>
+        <div class="cta__card-btn cta__card-btn--indigo">Request Booking</div>
+      </a>
     </div>
+    <!-- TODO: restore WhatsApp CTA once a real number is set
+    <a href="https://wa.me/REAL_NUMBER?text=..." target="_blank" rel="noopener" class="cta__card"> ... </a>
+    -->
 
     <!-- Inline contact form (hidden by default) -->
     <form class="cta__form" id="contact-form" style="display: none;" action="/api/contact" method="POST">
@@ -372,44 +429,47 @@
       </div>
     </div>
 
-    <!-- Testimonial placeholder -->
-    <div class="faq__testimonials">
-      <p>💬 Student testimonials coming soon</p>
-    </div>
   </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
-  <div class="footer__brand">
-    <div class="footer__logo">
-      <svg viewBox="0 0 40 40" width="28" height="28">
-        <defs><linearGradient id="logo-gradient-footer" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#646cff"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient></defs>
-        <circle cx="20" cy="20" r="19" fill="url(#logo-gradient-footer)"/>
-        <text x="20" y="26" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="16" font-weight="800">G</text>
-      </svg>
-      <span>As Strong As You Think</span>
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <svg viewBox="0 0 40 40" width="32" height="32">
+            <circle cx="20" cy="20" r="19" fill="url(#icon-grad)"/>
+            <text x="20" y="26" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="16" font-weight="800">G</text>
+          </svg>
+          <span>As Strong As You Think</span>
+        </div>
+        <p class="footer__desc">Private Claude Code training by Gal Sened.</p>
+        <p class="footer__tagline">The stronger your thinking, the more powerful you become.</p>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">NAVIGATE</span>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#proof">Results</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">WHAT I TEACH</span>
+        <a href="#tracks">Zero to Builder</a>
+        <a href="#tracks">10x Developer</a>
+        <a href="#tracks">Bring Your Challenge</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">GET IN TOUCH</span>
+        <a href="#cta">Book a free session</a>
+        <span class="footer__note">Private 1-on-1.<br>Remote worldwide.</span>
+      </div>
     </div>
-    <p>Private Claude Code training by Gal Segal</p>
-  </div>
-  <div class="footer__links">
-    <div>
-      <span class="footer__heading">NAVIGATE</span>
-      <a href="#philosophy">Philosophy</a>
-      <a href="#tracks">Tracks</a>
-      <a href="#proof">Results</a>
-      <a href="#about">About</a>
+    <div class="footer__bottom">
+      <span>© 2026 Gal Sened</span>
+      <span class="footer__built">Built with Claude Code, naturally.</span>
     </div>
-    <div>
-      <span class="footer__heading">CONNECT</span>
-      <a href="https://wa.me/YOUR_NUMBER" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="https://linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:YOUR_EMAIL">Email</a>
-    </div>
-  </div>
-  <div class="footer__bottom">
-    <span>© 2026 Gal Segal · Built with Claude Code, naturally.</span>
   </div>
 </footer>
 

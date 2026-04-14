@@ -1,14 +1,26 @@
 export function initContactForm() {
   const toggleBtn = document.getElementById('cta-form-toggle');
+  const scrollBtn = document.getElementById('cta-scroll-to-form');
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
 
   if (!toggleBtn || !form) return;
 
+  const openForm = () => {
+    form.style.display = 'flex';
+    form.querySelector('input')?.focus({ preventScroll: true });
+    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
   toggleBtn.addEventListener('click', () => {
     const isVisible = form.style.display !== 'none';
     form.style.display = isVisible ? 'none' : 'flex';
     if (!isVisible) form.querySelector('input')?.focus();
+  });
+
+  scrollBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    openForm();
   });
 
   form.addEventListener('submit', async (e) => {

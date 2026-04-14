@@ -3,3 +3,6 @@ dist/
 .vercel/
 .DS_Store
 *.local
+
+# Kling source clips — kept locally as backup; only the final hero-loop.mp4 ships
+assets/video/raw/
