@@ -760,6 +760,7 @@ img, video { display: block; max-width: 100%; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1.3;
+  text-wrap: balance;
 }
 
 .chasm__close {
