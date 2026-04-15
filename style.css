@@ -1363,10 +1363,28 @@ img, video { display: block; max-width: 100%; }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: max(12vh, 80px);
+  }
   .hero__overlay {
     background:
-      radial-gradient(ellipse at center, rgba(5, 5, 5, 0.30) 0%, rgba(5, 5, 5, 0.70) 75%),
-      rgba(5, 5, 5, 0.30);
+      linear-gradient(180deg, rgba(5, 5, 5, 0.48) 0%, rgba(5, 5, 5, 0.08) 55%, rgba(5, 5, 5, 0.35) 100%);
+  }
+  .hero__title {
+    text-shadow:
+      0 2px 20px rgba(0, 0, 0, 0.8),
+      0 0 40px rgba(0, 0, 0, 0.5);
+  }
+  .hero__subtitle {
+    text-shadow:
+      0 2px 16px rgba(0, 0, 0, 0.8),
+      0 0 30px rgba(0, 0, 0, 0.5);
+  }
+  .hero__label {
+    text-shadow:
+      0 1px 12px rgba(0, 0, 0, 0.85),
+      0 0 24px rgba(0, 0, 0, 0.5);
   }
 }
 
