@@ -425,11 +425,9 @@
     <!-- Inline contact form (hidden by default).
          Submits via Web3Forms (free, no signup beyond email-for-access-key).
          TODO: replace WEB3FORMS_ACCESS_KEY below with the real key from https://web3forms.com -->
-    <form class="cta__form" id="contact-form" style="display: none;" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY">
-      <input type="hidden" name="subject" value="New Claude Code training inquiry">
-      <input type="hidden" name="from_name" value="As Strong As You Think">
-      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+    <form class="cta__form" id="contact-form" style="display: none;" action="https://formsubmit.co/ajax/gals@comda.co.il" method="POST">
+      <input type="hidden" name="_subject" value="New Claude Code training inquiry">
+      <input type="hidden" name="_template" value="table">
       <input type="text" name="name" placeholder="Your name" required class="cta__input">
       <input type="email" name="email" placeholder="Your email" required class="cta__input">
       <select name="track" class="cta__input">
@@ -515,6 +513,8 @@
       <div class="footer__col">
         <span class="footer__heading">GET IN TOUCH</span>
         <a href="#cta">Book a free session</a>
+        <a href="mailto:gals@comda.co.il">gals@comda.co.il</a>
+        <a href="https://github.com/GalSened" target="_blank" rel="noopener">GitHub</a>
         <span class="footer__note">Private 1-on-1.<br>Remote worldwide.</span>
       </div>
     </div>

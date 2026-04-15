@@ -30,9 +30,9 @@ export function initContactForm() {
     submitBtn.disabled = true;
 
     try {
-      // Web3Forms expects multipart FormData posted to its action URL.
       const res = await fetch(form.action, {
         method: 'POST',
+        headers: { 'Accept': 'application/json' },
         body: new FormData(form),
       });
       const json = await res.json().catch(() => ({}));
@@ -44,7 +44,7 @@ export function initContactForm() {
         throw new Error(json.message || 'Send failed');
       }
     } catch (err) {
-      status.textContent = 'Couldn\'t send right now. Please email gal directly.';
+      status.textContent = 'Couldn\'t send right now. Email gals@comda.co.il directly.';
       status.style.color = 'var(--color-red)';
     } finally {
       submitBtn.textContent = 'Send Message';
